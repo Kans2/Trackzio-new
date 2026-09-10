@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__bottom">
-          <p>&copy; {new Date().getFullYear()} CineVault. Built for learning purposes.</p>
+          <p>&copy; {new Date().getFullYear()} CineVault. Built by kannan s. All rights reserved.</p>
         </div>
       </div>
     </footer>

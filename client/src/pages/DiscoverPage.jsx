@@ -35,12 +35,8 @@ const DiscoverPage = ({ onMovieClick }) => {
     try {
       setLoading(true);
       setError(null);
-      let data;
-      if (genreId) {
-        data = await discoverMovies(genreId, pageNum, sort);
-      } else {
-        data = await fetchTrending(pageNum);
-      }
+      // Always use discover API so sorting works (fetchTrending ignores sort)
+      const data = await discoverMovies(genreId, pageNum, sort);
       setMovies((prev) => (append ? [...prev, ...data.results] : data.results));
       setTotalPages(data.totalPages);
       setPage(pageNum);

@@ -90,13 +90,6 @@ const discoverByGenre = async (req, res, next) => {
     const { genre, sort_by } = req.query;
     const page = parseInt(req.query.page) || 1;
 
-    if (!genre) {
-      return res.status(400).json({
-        success: false,
-        message: 'Genre ID is required',
-      });
-    }
-
     const data = await tmdbService.discoverByGenre(genre, page, sort_by);
     res.json({ success: true, data });
   } catch (error) {
