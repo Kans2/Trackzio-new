@@ -1,0 +1,52 @@
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  text-align: center;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.error-state--full {
+  min-height: 60vh;
+}
+
+.error-state__icon {
+  color: var(--accent);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.error-state__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.error-state__message {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  max-width: 400px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.error-state__retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--gradient-accent);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-glow);
+}
+
+.error-state__retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
